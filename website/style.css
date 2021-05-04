@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+/* --- container --- */
+@media only screen and (max-width: 700px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgb(238, 144, 56), rgb(123, 123, 233));
+  }
+}
+
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 15px;
+  background-image: linear-gradient(to bottom, rgb(238, 144, 56), rgb(123, 123, 233));
+  justify-content: center;
+}
+
+.main-hero {
+  min-height: 10vh;
+  padding-top: 3em;
+}
+
+/* ---typography--- */
+
+label {
+  font-size: 2em;
+  font-family: 'Red Hat Display', sans-serif;
+  margin: 1.2em 0em;
+  color: #ddd;
+}
+
+h1 {
+  color: #ddd;
+  font-size: 5em;
+}
+
+h2 {
+  color: #ddd;
+  font-size: 2em;
+}
+
+/* ---forms--- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em 0em;
+}
+
+input {
+  display: block;
+  height: 50px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: rgb(248, 221, 195);
+  font-size: 1.5em;
+}
+
+textarea {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: rgb(248, 221, 195);
+  font-size: 1.5em;
+  height: 15vh;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  box-shadow: 4px 4px 4px rgba(0, 0 , 0, 0.3);
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.5em;
+  background-color: #444;
+  color: rgb(238, 144, 56);
+}
+
+button:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
