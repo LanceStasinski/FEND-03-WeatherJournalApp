@@ -54,11 +54,11 @@ const getData = async (url='')=>{
     //add the newest information into the 'Your latest entry' section
     for (let i = 0; i < fullData.length; i++) {
       if (i === fullData.length - 1) {
-        document.getElementById('entry').style.display = "block";
+        document.getElementById('entryHolder').style.display = "block";
         document.getElementById('date').innerHTML = fullData[i].date;
         document.getElementById('temp').innerHTML = "Temperature: " + Math.floor((fullData[i].temp -273.15) * (9/5) + 32) + " °F";
         document.getElementById('weather').innerHTML = "Weather: " + fullData[i].weather;
-        document.getElementById('thoughts').innerHTML = "Feelings: " + fullData[i].feelings;
+        document.getElementById('content').innerHTML = "Feelings: " + fullData[i].feelings;
       } else {
         //add old entries to 'Your past entries' section
         document.getElementById('pastTitle').style.display = "block";
@@ -88,7 +88,7 @@ generate.addEventListener('click', updateJournal);
 
 function updateJournal() {
   const zipCode = document.getElementById('zip').value;
-  const feelings = document.getElementById('feeling').value;
+  const feelings = document.getElementById('feelings').value;
   const date = new Date();
   const dateString = date.toDateString();
   //get weather from web api using input zip code
